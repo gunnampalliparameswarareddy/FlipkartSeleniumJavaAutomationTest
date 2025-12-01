@@ -1,0 +1,11 @@
+package com.gunnampalli.enums;
+
+public enum ConfigProperties {
+	URL,
+	RUNMODE,
+	PASSTESTSCREENSHOT,
+	FAILTESTSCREENSHOT,
+	SKIPTESTSCREENSHOT,
+	RETRYFAILED,
+	CATEGORYTYPE;
+}

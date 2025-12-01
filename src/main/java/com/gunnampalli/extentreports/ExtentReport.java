@@ -1,0 +1,68 @@
+package com.gunnampalli.extentreports;
+
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.util.Objects;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.gunnampalli.constants.FrameworkConstants;
+import com.gunnampalli.enums.CategoryType;
+import com.gunnampalli.exceptions.FileNotFoundExceptions;
+
+public final class ExtentReport {
+	private ExtentReport() {}
+	private static ExtentReports extentReport;
+	public static void initExtentReport()
+	{
+		if(Objects.isNull(extentReport)) {
+			extentReport = new ExtentReports();
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getReportspath());
+			spark.config().setDocumentTitle("Flipkart Automation TestReport");
+			spark.config().setReportName("Automation Test Report");
+			spark.config().setTheme(Theme.DARK);
+			extentReport.attachReporter(spark);
+			System.out.println("InitExtentReport called in SUite");
+		}
+
+	}
+	public static void flushExtentReport()
+	{
+		if(Objects.nonNull(extentReport))
+		{
+			extentReport.flush();
+		}
+		ExtentReportManager.unload();
+		try {
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getReportspath()).toURI());
+		} catch (IOException e) {
+			throw new FileNotFoundExceptions(e.toString());
+		}
+	}
+	
+	public static void createTest(String testName)
+	{
+		ExtentReportManager.setExtentTest(extentReport.createTest(testName));
+	}
+	
+	public static void addAuthors(String [] authors)
+	{	
+		for (String author : authors) {
+			ExtentReportManager.getExtentTest().assignAuthor(author);
+		}
+	}
+	
+	public static void addCategoryType(CategoryType[] categories)
+	{
+		for (CategoryType categoryType : categories) {
+			ExtentReportManager.getExtentTest().assignCategory(categoryType.toString());
+		}
+	}
+	
+	public static ExtentReports getExtentReport()
+	{
+		return extentReport;
+	}
+}

@@ -1,0 +1,80 @@
+version: "3"
+services:
+  chrome117:
+    image: selenium/standalone-chrome:117.0
+    container_name: chrome117
+    ports:
+      - "5551:4444"
+    shm_size: 2gb
+    environment:
+      - BROWSER_NAME=chrome
+      - BROWSER_VERSION=117.0
+
+  chrome116:
+    image: selenium/standalone-chrome:116.0
+    container_name: chrome116
+    ports:
+      - "5552:4444"
+    shm_size: 2gb
+    environment:
+      - BROWSER_NAME=chrome
+      - BROWSER_VERSION=116.0
+
+  firefox117:
+    image: selenium/standalone-firefox:117.0
+    container_name: firefox117
+    ports:
+      - "5553:4444"
+    shm_size: 2gb
+    environment:
+      - BROWSER_NAME=firefox
+      - BROWSER_VERSION=117.0
+
+  firefox116:
+    image: selenium/standalone-firefox:116.0
+    container_name: firefox116
+    ports:
+      - "5554:4444"
+    shm_size: 2gb
+    environment:
+      - BROWSER_NAME=firefox
+      - BROWSER_VERSION=116.0
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.11.1
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    volumes:
+      - kibana_data:/usr/share/kibana/data
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+volumes:
+  esdata:
+    driver: local
+  kibana_data:
+    driver: local
+  portainer_data:
+    driver: local
