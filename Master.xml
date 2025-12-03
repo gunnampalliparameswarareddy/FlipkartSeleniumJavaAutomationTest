@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests" thread-count="3" data-provider-thread-count="3">
+	<listeners>
+		<listener class-name="com.gunnampalli.listeners.ListenerClass"/>
+    	<listener class-name="com.gunnampalli.listeners.AnnotationTransformer"/>
+  	</listeners>
+  <test name="Test1">
+  	<parameter name="browser" value="chrome"/>
+  	<parameter name="version" value="117.0"/>
+    <classes>
+      <class name="com.gunnampalli.test.FlipkartTest"/>
+    </classes>
+  </test>
+  <!--  <test name="Test2">
+  	<parameter name="browser" value="firefox"/>
+  	<parameter name="version" value="117.0"/>
+    <classes>
+      <class name="com.gunnampalli.test.FlipkartTest"/>
+    </classes>
+  </test>
+    <test name="Test3">
+  	<parameter name="browser" value="edge"/>
+  	<parameter name="version" value="117.0"/>
+    <classes>
+      <class name="com.gunnampalli.test.FlipkartTest"/>
+    </classes>
+  </test>-->
+</suite> 

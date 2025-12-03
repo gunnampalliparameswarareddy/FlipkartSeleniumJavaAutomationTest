@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Nov 29 21:03:56 IST 2025</td>
+<td>Started on:</td><td>Tue Dec 02 10:34:07 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1942 ms)</td>
+<tr><td>Total time:</td><td>21 seconds (21433 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,61 +76,53 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gunnampalli.test.FlipkartTest.setupDriver()'><b>setupDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Parameters: [Ljava.lang.Object;@bf71cec, public void com.gunnampalli.test.FlipkartTest.flipkartValidTest(java.util.Map)</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: crashed.
-  (session not created: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
+<td title='com.gunnampalli.test.FlipkartTest.setupDriver()'><b>setupDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Parameters: [Ljava.lang.Object;@7051777c, public void com.gunnampalli.test.FlipkartTest.flipkartValidTest(java.util.Map)</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=dnsNotFound&amp;u=https%3A//www.flipkart.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20www.flipkart.com.
 Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--user-data-dir=C:/Users/HP..., --profile-directory=Profile 2], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [94a8a49d-3a1e-4101-a696-8d075c06247e, get {url=https://www.flipkart.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8516, moz:profile: C:\Users\HP\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 94a8a49d-3a1e-4101-a696-8d075c06247e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:182)
-	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:20)
 	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1972715585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1972715585'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: crashed.
-  (session not created: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1054041479", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1054041479'><pre>org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=dnsNotFound&amp;u=https%3A//www.flipkart.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20www.flipkart.com.
 Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--user-data-dir=C:/Users/HP..., --profile-directory=Profile 2], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [94a8a49d-3a1e-4101-a696-8d075c06247e, get {url=https://www.flipkart.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8516, moz:profile: C:\Users\HP\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 94a8a49d-3a1e-4101-a696-8d075c06247e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:182)
-	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:20)
 	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
@@ -140,12 +132,152 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
 	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
-<td>0</td>
-<td>com.gunnampalli.test.FlipkartTest@4c402120</td></tr>
+<td>20</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
+<tr>
+<td title='com.gunnampalli.test.FlipkartTest.setupDriver()'><b>setupDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Parameters: [Ljava.lang.Object;@3241713e, public void com.gunnampalli.test.FlipkartTest.flipkartValidTest(java.util.Map)</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn&apos;t exist)
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
+Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2136863995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2136863995'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn&apos;t exist)
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
+Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>1</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
+<tr>
+<td title='com.gunnampalli.test.FlipkartTest.setupDriver()'><b>setupDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Parameters: [Ljava.lang.Object;@5ecba515, public void com.gunnampalli.test.FlipkartTest.flipkartValidTest(java.util.Map)</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69ce9c1939dbdd10dace42bdd14f0df1, get {url=https://www.flipkart.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52405}, goog:processID: 13432, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52405/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69ce9c1939dbdd10dace42bdd14f0df1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:20)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2128159822", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2128159822'><pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=142.0.7444.176)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69ce9c1939dbdd10dace42bdd14f0df1, get {url=https://www.flipkart.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52405}, goog:processID: 13432, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52405/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69ce9c1939dbdd10dace42bdd14f0df1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:20)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>4</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -159,7 +291,17 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <td title='com.gunnampalli.test.FlipkartTest.quitDriver()'><b>quitDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest</td>
 <td></td>
 <td>0</td>
-<td>com.gunnampalli.test.FlipkartTest@4c402120</td></tr>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
+<tr>
+<td title='com.gunnampalli.test.FlipkartTest.quitDriver()'><b>quitDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest</td>
+<td></td>
+<td>0</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
+<tr>
+<td title='com.gunnampalli.test.FlipkartTest.quitDriver()'><b>quitDriver</b><br>Test class: com.gunnampalli.test.FlipkartTest</td>
+<td></td>
+<td>0</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -170,15 +312,15 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gunnampalli.test.FlipkartTest.flipkartValidTest()'><b>flipkartValidTest</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Test method: Flipkart will execute<br>Parameters: {testname=flipkartValidTest, version=117.0, execute=yes, price=490, browser=chrome}</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: crashed.
+<td title='com.gunnampalli.test.FlipkartTest.flipkartValidTest()'><b>flipkartValidTest</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Test method: Flipkart will execute<br>Parameters: {testname=flipkartValidTest, version=117.0, execute=yes, price=490, browser=edge}</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
   (session not created: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
 Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
 Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--user-data-dir=C:/Users/HP..., --profile-directory=Profile 2], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
@@ -189,24 +331,25 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:182)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
 	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
 	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1330758942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1330758942'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: crashed.
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1443388377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1443388377'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
   (session not created: DevToolsActivePort file doesn&apos;t exist)
-  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
 Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
 Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--user-data-dir=C:/Users/HP..., --profile-directory=Profile 2], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
@@ -217,14 +360,17 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
 	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
-	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:182)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
 	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
 	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
@@ -234,12 +380,150 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
 	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
 <td>0</td>
-<td>com.gunnampalli.test.FlipkartTest@4c402120</td></tr>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
+<tr>
+<td title='com.gunnampalli.test.FlipkartTest.flipkartValidTest()'><b>flipkartValidTest</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Test method: Flipkart will execute<br>Parameters: {testname=flipkartValidTest, version=117.0, execute=yes, price=490, browser=chrome}</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn&apos;t exist)
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
+Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace720700215", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace720700215'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn&apos;t exist)
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
+Host info: host: &apos;DESKTOP-362CTOA&apos;, ip: &apos;169.254.136.51&apos;
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:99)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
+<tr>
+<td title='com.gunnampalli.test.FlipkartTest.flipkartValidTest()'><b>flipkartValidTest</b><br>Test class: com.gunnampalli.test.FlipkartTest<br>Test method: Flipkart will execute<br>Parameters: {testname=flipkartValidTest, version=117.0, execute=yes, price=490, browser=firefox}</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=dnsNotFound&amp;u=https%3A//www.flipkart.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20www.flipkart.com.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [94a8a49d-3a1e-4101-a696-8d075c06247e, get {url=https://www.flipkart.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8516, moz:profile: C:\Users\HP\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 94a8a49d-3a1e-4101-a696-8d075c06247e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:20)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace682348835", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace682348835'><pre>org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=dnsNotFound&amp;u=https%3A//www.flipkart.com/&amp;c=UTF-8&amp;d=We%20can%E2%80%99t%20connect%20to%20the%20server%20at%20www.flipkart.com.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.26&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [94a8a49d-3a1e-4101-a696-8d075c06247e, get {url=https://www.flipkart.com/}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 145.0.2, moz:accessibilityChecks: false, moz:buildID: 20251124145406, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8516, moz:profile: C:\Users\HP\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 94a8a49d-3a1e-4101-a696-8d075c06247e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:20)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>com.gunnampalli.test.FlipkartTest@cb0755b</td></tr>
 </table><p>
 </body>
 </html>

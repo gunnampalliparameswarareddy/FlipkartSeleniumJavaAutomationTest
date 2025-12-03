@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" data-provider-thread-count="1">
+<suite name="Suite" parallel="methods" data-provider-thread-count="3">
 	<listeners>
 		<listener class-name="com.gunnampalli.listeners.ListenerClass"/>
 		<listener class-name="com.gunnampalli.listeners.MethodInterceptor"/>
     	<listener class-name="com.gunnampalli.listeners.AnnotationTransformer"/>
   	</listeners>
-	<test name="Test" parallel ="false" thread-count="1">
+	<test name="Test" thread-count="3">
 	    <classes>
 	      <class name="com.gunnampalli.test.FlipkartTest"/>
 	    </classes>

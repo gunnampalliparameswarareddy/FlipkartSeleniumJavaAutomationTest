@@ -12,7 +12,7 @@ public class AnnotationTransformer implements IAnnotationTransformer {
 
 	@Override
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-		annotation.setDataProvider("getDataFromDatasheet");
+		annotation.setDataProvider("getDataFromDataProvidersheet");
 		annotation.setDataProviderClass(DataProviderUtils.class);
 		annotation.setRetryAnalyzer(RetryFailed.class);
 	}

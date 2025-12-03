@@ -61,6 +61,15 @@ public final class ExtentReport {
 		}
 	}
 	
+	public static void addBrowserType(String browser)
+	{
+		ExtentReportManager.getExtentTest().assignDevice(browser);
+	}
+	
+	public static void addSystemInfo(String value)
+	{
+		ExtentReportManager.getExtentTest().assignDevice(value);
+	}
 	public static ExtentReports getExtentReport()
 	{
 		return extentReport;

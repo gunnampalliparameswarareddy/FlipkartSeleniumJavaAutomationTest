@@ -1,4 +1,48 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.47 s -- in TestSuite
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 33.12 s <<< FAILURE! -- in TestSuite
+com.gunnampalli.test.FlipkartTest.setupDriver[[Ljava.lang.Object;@53177b5c, public void com.gunnampalli.test.FlipkartTest.flipkartValidTest(java.util.Map)](0) -- Time elapsed: 4.211 s <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from msedge location C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe is no longer running, so msedgedriver is assuming that msedge has crashed.) 
+Host info: host: 'DESKTOP-362CTOA', ip: '169.254.136.51'
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.26'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [user-data-dir=C:/Users/HP/A..., profile-directory=Default, --remote-allow-origins=*], binary: C:/Program Files (x86)/Micr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:174)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:99)
+	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
+	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
+	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
+	at com.gunnampalli.drivers.LocalBrowsers.setUpEdgeDriver(LocalBrowsers.java:57)
+	at com.gunnampalli.drivers.DriverFactory.initDriverType(DriverFactory.java:81)
+	at com.gunnampalli.drivers.Driver.initDriver(Driver.java:18)
+	at com.gunnampalli.test.BaseTest.setupDriver(BaseTest.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+

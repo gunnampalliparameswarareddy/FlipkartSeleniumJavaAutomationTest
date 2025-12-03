@@ -3,6 +3,9 @@ D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\constants\FrameworkC
 D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\drivers\Driver.java
 D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\drivers\DriverFactory.java
 D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\drivers\DriverManager.java
+D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\drivers\LocalBrowsers.java
+D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\drivers\RemoteDocker.java
+D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\drivers\RemoteSauceLabs.java
 D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\enums\CategoryType.java
 D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\enums\ConfigProperties.java
 D:\Flipkart\seleniumframework\src\main\java\com\gunnampalli\enums\DriverType.java
