@@ -6,8 +6,6 @@
   <name>FlipkartAutomation</name>
   <description>To test flipkart website</description>
   <build>
-    <!-- To define the plugin version in your parent POM -->
-    <pluginManagement>
       <plugins>
       	<!--Maven Compiler Plugin-->
         <plugin>
@@ -27,7 +25,6 @@
           </configuration>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
   <dependencies>
   	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
