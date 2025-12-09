@@ -3,6 +3,8 @@ package com.gunnampalli.extentreports;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -15,11 +17,14 @@ import com.gunnampalli.exceptions.FileNotFoundExceptions;
 public final class ExtentReport {
 	private ExtentReport() {}
 	private static ExtentReports extentReport;
+	private static String reportDateTime;
+	
 	public static void initExtentReport()
 	{
 		if(Objects.isNull(extentReport)) {
 			extentReport = new ExtentReports();
-			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getReportspath());
+			reportDateTime = getDateAndTime();
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getReportspath()+reportDateTime);
 			spark.config().setDocumentTitle("Flipkart Automation TestReport");
 			spark.config().setReportName("Automation Test Report");
 			spark.config().setTheme(Theme.DARK);
@@ -36,7 +41,7 @@ public final class ExtentReport {
 		}
 		ExtentReportManager.unload();
 		try {
-			Desktop.getDesktop().browse(new File(FrameworkConstants.getReportspath()).toURI());
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getReportspath()+reportDateTime).toURI());
 		} catch (IOException e) {
 			throw new FileNotFoundExceptions(e.toString());
 		}
@@ -73,5 +78,14 @@ public final class ExtentReport {
 	public static ExtentReports getExtentReport()
 	{
 		return extentReport;
+	}
+	
+	public static String getDateAndTime()
+	{
+		LocalDateTime now = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MMM:yyyy hh:mm:ss");
+		String formatedDate = now.format(formatter);
+
+		return formatedDate;
 	}
 }
