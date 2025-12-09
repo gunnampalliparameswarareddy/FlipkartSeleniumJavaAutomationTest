@@ -24,7 +24,7 @@ public final class ExtentReport {
 		if(Objects.isNull(extentReport)) {
 			extentReport = new ExtentReports();
 			reportDateTime = getDateAndTime();
-			ExtentSparkReporter spark = new ExtentSparkReporter(reportDateTime+FrameworkConstants.getReportspath());
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getReportspath()+reportDateTime+".html");
 			spark.config().setDocumentTitle("Flipkart Automation TestReport");
 			spark.config().setReportName("Automation Test Report");
 			spark.config().setTheme(Theme.DARK);
@@ -41,7 +41,7 @@ public final class ExtentReport {
 		}
 		ExtentReportManager.unload();
 		try {
-			Desktop.getDesktop().browse(new File(reportDateTime+FrameworkConstants.getReportspath()).toURI());
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getReportspath()+reportDateTime+".html").toURI());
 		} catch (IOException e) {
 			throw new FileNotFoundExceptions(e.toString());
 		}

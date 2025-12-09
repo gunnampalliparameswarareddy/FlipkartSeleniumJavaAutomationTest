@@ -8,7 +8,7 @@ public class FrameworkConstants {
 	private static final String CHROMEBROWSERTYPE = "chrome";
 	private static final String FIREFOXBROWSERTYPE = "firefox";
 	private static final String EDGEBROWSERTYPE = "edge";
-	private static final String REPORTSPATH = USERDIRECTORYPATH+"/reports/Report.html";
+	private static final String REPORTSPATH = USERDIRECTORYPATH+"/reports/Report_";
 	private static final int EXPLICITWAITTIME = 20;
 	
 	public static String getConfigfilepath() {
