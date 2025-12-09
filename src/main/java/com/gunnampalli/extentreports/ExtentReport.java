@@ -83,7 +83,7 @@ public final class ExtentReport {
 	public static String getDateAndTime()
 	{
 		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MMM:yyyy hh:mm:ss");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd_MMM_yyyy_hh_mm_ss");
 		String formatedDate = now.format(formatter);
 
 		return formatedDate;
