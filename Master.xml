@@ -5,6 +5,8 @@
     	<listener class-name="com.gunnampalli.listeners.AnnotationTransformer"/>
   	</listeners>
   <test name="Test1">
+	<parameter name="browser" value="chrome"/>
+  	<parameter name="version" value="117.0"/>
     <classes>
       <class name="com.gunnampalli.test.FlipkartTest"/>
     </classes>
