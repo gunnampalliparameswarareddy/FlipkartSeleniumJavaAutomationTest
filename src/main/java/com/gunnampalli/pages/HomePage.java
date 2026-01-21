@@ -13,7 +13,7 @@ import com.gunnampalli.factories.ExplicitWaitFactory;
 public class HomePage extends BasePage{
 
 	private String loginWindowPath = "//div[@class='_17UxrZ']";
-	private String mobilePath = "//span[@class='_1XjE3T']/span[contains(text(),'Mobiles')]";
+	private String mobilePath = "//span[@class='vpQU2r']/span[contains(text(),'Mobiles')]";
 	private String lowtoHighPricePath="//div[contains(text(),'Price -- Low to High')]";
 	private String lowestMobilePricePath = "//div[@class=\"hl05eU\"]/descendant::div[contains(@class,\"Nx9bqj\")]";
 	private String lowestMobileAmountPath ="(//div[contains(@class,'ZFwe0M')]/descendant::div[@class='oFEPlD']/descendant::div[contains(@class,'hZ3P6w')])[1]";
